@@ -22,12 +22,8 @@
                 <label for="password" class="text-slate-500">Password</label>
                 <input type="password" id="password" name="password" placeholder="Type Your Password...." class="w-full border rounded-lg shadow-sm outline-green-500 px-3 py-2">
             </div>
-            <div class="flex flex-col">
-                <label for="confirmPassword" class="text-slate-500">Confirmation Password</label>
-                <input type="confirmPassword" id="confirmPassword" name="confirmPassword" placeholder="Type Your Confirm Password...." class="w-full border rounded-lg shadow-sm outline-green-500 px-3 py-2">
-            </div>
             <div class="flex justify-end mt-4">
-                <button type="submit" class="bg-green-500 text-white font-medium px-3 py-2 rounded-lg text-xl hover:bg-green-400 hover:duration-150">Sign Up</button>
+                <button type="submit" class="bg-green-500 text-white font-medium px-3 py-2 rounded-lg hover:bg-green-400 hover:duration-150">Sign Up</button>
             </div>
         </form>
         <div>

@@ -19,7 +19,7 @@
                 <input type="password" id="password" name="password" placeholder="Type Your Password...." class="w-full border rounded-lg shadow-sm outline-green-500 px-3 py-2">
             </div>
             <div class="flex justify-end mt-4">
-                <button type="submit" class="bg-green-500 text-white font-medium px-3 py-2 rounded-lg text-xl hover:bg-green-400 hover:duration-150">Sign In</button>
+                <button type="submit" class="bg-green-500 text-white font-medium px-3 py-2 rounded-lg hover:bg-green-400 hover:duration-150">Sign In</button>
             </div>
         </form>
         <div>
