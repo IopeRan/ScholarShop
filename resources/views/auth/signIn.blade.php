@@ -2,7 +2,7 @@
 
 @section('container')
     <img src="{{ asset('assets/auth/shop.png') }}" alt="shop" class="w-14">
-    <div class="bg-white w-full h-max pb-3 rounded-lg overflow-hidden shadow-sm">
+    <div class="bg-white w-full lg:w-1/3 h-max rounded-lg overflow-hidden shadow-sm">
         <div class="bg-green-500 w-full min-h-4"></div>
         <div>
             <h5 class="font-mono text-center py-4 text-2xl font-medium border-b text-green-500">ScholarShop</h5>
@@ -24,6 +24,9 @@
         </form>
         <div>
             <p class="font-light my-3 text-center text-sm">don't have an account? <a href="/signup" class="text-sky-500 hover:text-sky-400 hover:duration-150">create one</a></p>
+        </div>
+        <div class="flex justify-end items-end">
+            <div class="bg-green-500 w-full h-4"></div>
         </div>
     </div>
 @endsection
