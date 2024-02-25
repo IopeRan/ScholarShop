@@ -6,13 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }} | ScholarShop</title>
     <link rel="icon" href="{{ asset('assets/auth/shop.png') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     @vite('resources/css/app.css')
 </head>
-<body>
-    <div class="bg-slate-100 w-full h-screen flex flex-col gap-4 justify-center items-center px-6">
+<body class="w-full h-screen">
+    @include('partials.navbar')
+    <div class="flex flex-col gap-4 px-6">
         @yield('container')
     </div>
-
+    
+    <script src="{{ asset('js/navbar.js') }}"></script>
     @include('sweetalert::alert')
 </body>
 </html>

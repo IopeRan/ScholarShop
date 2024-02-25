@@ -7,7 +7,10 @@
         <div>
             <h5 class="font-mono text-center py-4 text-2xl font-medium border-b text-green-500">ScholarShop</h5>
         </div>
-        <form action="" method="post" class="flex flex-col w-full p-4 gap-3 border-b">
+        @if(session('error'))
+            <p class="text-red-500 text-center">{{ session('error') }}</p>
+        @endif
+        <form action="" method="post" class="flex flex-col w-full gap-3 p-4 border-b">
             @method('post')
             @csrf
             <div class="flex flex-col">

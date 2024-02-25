@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/signin', [AuthController::class, 'signIn']);
-Route::post('/signin', [AuthController::class, 'signInForm']);
-Route::get('/signup', [AuthController::class, 'signUp']);
-Route::post('/signup', [AuthController::class, 'signUpForm']);
+
+Route::middleware(['guest'])->group(function () {
+    Route::get('/signin', [AuthController::class, 'signIn'])->name('login');
+    Route::post('/signin', [AuthController::class, 'signInForm']);
+    Route::get('/signup', [AuthController::class, 'signUp']);
+    Route::post('/signup', [AuthController::class, 'signUpForm']);
+    
+});
+
+Route::get('/', [HomeController::class, 'index']);
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/signout', [AuthController::class, 'signOut']);
+});
