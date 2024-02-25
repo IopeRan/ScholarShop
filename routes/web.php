@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
@@ -33,4 +34,5 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/shop', [ShopController::class, 'index']);
     Route::get('/profile', [ProfileController::class, 'index']);
     Route::post('/profile', [ProfileController::class, 'update']);
+    Route::get('/account', [AccountController::class, 'index']);
 });
