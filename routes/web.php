@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +31,6 @@ Route::get('/', [HomeController::class, 'index']);
 Route::middleware(['auth'])->group(function () {
     Route::get('/signout', [AuthController::class, 'signOut']);
     Route::get('/shop', [ShopController::class, 'index']);
+    Route::get('/profile', [ProfileController::class, 'index']);
+    Route::post('/profile', [ProfileController::class, 'update']);
 });
